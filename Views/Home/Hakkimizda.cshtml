@@ -1,0 +1,15 @@
+﻿@model  WebProjesi.Models.Model.Hakkimizda
+@{
+    ViewBag.Title = "Hakkımızda";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+<div class="container">
+    <div class="col-md-12">
+        <h4>Hakkımızda</h4>
+        <img src="~/Content/SiteLayout/img/budy/FqStmS4.jpg" alt="" class="align-center img-box img-responsive" />
+        <p>
+            @Html.Raw(Model.Aciklama)
+            <audio controls autoplay><source hidden="hidden" src="~/Uploads/Kimlik/ses_dosyasi.mp3"></audio>
+        </p>
+    </div>
+</div>

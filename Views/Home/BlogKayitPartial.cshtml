@@ -1,0 +1,15 @@
+﻿@model IEnumerable<WebProjesi.Models.Model.Blog>
+@using WebProjesi.Helper;
+@foreach (var item in Model)
+{
+   <div class="container align-content-md-center" > 
+    <li>
+        <img src="@item.ResimURL" class="pull-left" alt="@item.Baslik" height="80" width="60" />
+        <h6><a href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">@item.Baslik</a></h6>
+        <p>
+            @Html.Raw(item.Icerik.Substring(0, 40))
+        </p>
+    </li>
+</div>
+}
+
